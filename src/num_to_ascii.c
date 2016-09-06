@@ -36,4 +36,5 @@ void uitoa(unsigned num, char* str) {
     str[ii] = str[index-ii];
     str[index-ii] = temp;
   }
+  str[index+1] = 0;
 }

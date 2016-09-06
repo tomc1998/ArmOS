@@ -11,15 +11,11 @@ LD_LINK_LIBS = -lgcc -lm
 .o.elf:
 	$(LD) $(LDFLAGS) -o $(BIN_PATH)/$@ $^ $(LD_LINK_LIBS)
 
-#.SUFFIXES: .o .s
-#.o.s:
-#	$(CC) $(CCFLAGS) -o $(OBJ_PATH)/$@ $^ 
-
 all: $(BIN_PATH)/kernel.elf
 
 $(BIN_PATH)/kernel.elf: $(OBJ_PATH)/bootstrap.o $(OBJ_PATH)/kernel.o $(OBJ_PATH)/raise.o $(OBJ_PATH)/log.o $(OBJ_PATH)/num_to_ascii.o $(OBJ_PATH)/bare_math.o
 	$(LD) $(LDFLAGS) -o $@ $^ $(LD_LINK_LIBS)
-	#$(CC) $(CFLAGS) -o $@ -c $^
+
 
 $(OBJ_PATH)/kernel.o: $(OBJ_PATH)/raise.o $(OBJ_PATH)/log.o
 

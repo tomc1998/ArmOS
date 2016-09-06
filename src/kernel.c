@@ -3,7 +3,7 @@
 #include "num_to_ascii.h"
 #include "bare_math.h"
 
-int main(void) {
+int kernel_main(void) {
   char str[100];
   print("Hello, world!\n");
   uitoa(powui(10, 2), &str[0]);

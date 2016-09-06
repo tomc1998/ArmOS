@@ -1,0 +1,11 @@
+bin
+obj
+test/bin
+test/obj
+run.sh
+tests_run.sh
+qemu_help.txt
+.projectile
+*.swp
+\#*#
+
